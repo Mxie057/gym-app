@@ -2,7 +2,7 @@ import { View, Text, ScrollView, TouchableOpacity, Image, ImageBackground} from 
 import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react'
 
-const WorkoutCard = ({id, imgUrl, title, fitnessLevel}) => {
+const WorkoutImageCard = ({id, imgUrl, title, fitnessLevel}) => {
   return (
     <TouchableOpacity className='mt-4'>
       <ImageBackground source ={{
@@ -22,4 +22,4 @@ const WorkoutCard = ({id, imgUrl, title, fitnessLevel}) => {
   )
 }
 
-export default WorkoutCard
+export default WorkoutImageCard

@@ -5,9 +5,9 @@ import {
   Bars3Icon as Bars3Icon,
   ArrowUpRightIcon, 
 } from "react-native-heroicons/outline";
-import WorkoutCard from '../components/WorkoutCard';
+import WorkoutImageCard from '../components/WorkoutImageCard';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import WorkoutScreen from './WorkoutScreen';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -38,7 +38,8 @@ const HomeScreen = () => {
       <ScrollView>
         <Text className='text-white font-bold mx-2'>Quick Start</Text>
           <View className='bg-slate-800 h-8 w-44 mx-auto my-2 rounded-lg justify-center'>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('WorkoutScreen')
+            }>
               <Text className='font-bold text-white text-base mx-auto'>Start Empty Workout</Text>
             </TouchableOpacity>
           </View>
@@ -48,18 +49,26 @@ const HomeScreen = () => {
           <TouchableOpacity><Text className='text-white text-base mt-1'>See All <ArrowUpRightIcon color="white" size="16"/></Text></TouchableOpacity>
         </View>
         
-        <WorkoutCard
+        <WorkoutImageCard
           imgUrl="https://www.mensjournal.com/wp-content/uploads/mf/main_cable_chest_arms_.jpg?w=1188&h=630&crop=1&quality=86&strip=all"
           title="Beginner Chest"
-          fitnessLevel="1"/>
-        <WorkoutCard
+          fitnessLevel="1"
+        />
+        <WorkoutImageCard
           imgUrl="https://img.livestrong.com/640/clsd/getty/d267c37246ff42b1b98972f884989f6f.jpg"
           title="Advanced Cardio"
-          fitnessLevel="1"/>
-        <WorkoutCard
+          fitnessLevel="1"
+        />
+        <WorkoutImageCard
           imgUrl="https://i1.wp.com/whatsgood.vitaminshoppe.com/wp-content/uploads/2022/07/man-leg-press-machine.jpg?fit=1480%2C614&ssl=1"
           title="Anti-Chicken Legs"
-          fitnessLevel="1"/>
+          fitnessLevel="1"
+        />
+        <WorkoutImageCard
+          imgUrl="https://fitnessvolt.com/wp-content/uploads/2022/06/Battle-Rope-Exercises.jpg"
+          title="HIIT"
+          fitnessLevel="1"
+        />
       </ScrollView>
     </SafeAreaView>
   )
